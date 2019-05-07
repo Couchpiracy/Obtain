@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0B954824-8AA1-45CB-B0E8-DA8A4B69C5A2}" SchemaVersion="94">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{0B954824-8AA1-45CB-B0E8-DA8A4B69C5A2}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0B954824-8AA1-45CB-B0E8-DA8A4B69C5A2}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Village_Weight" ID="{DA71658D-A1D8-427E-A46D-5B5C2DC68369}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Desert_Weight" ID="{E8D0170E-545C-45E7-9B76-43309735429B}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Quarry_Weight" ID="{992D64B9-E7A5-429D-9758-D77694853FB9}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

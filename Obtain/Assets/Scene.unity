@@ -9634,28 +9634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941bddd086a438648a5778143dc3b978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0391829491b45934e9b4d98cc9df099d,
-      type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  LargeModePositions: []
-  multiPositionArray: []
 --- !u!114 &260576563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9667,16 +9645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5042b1635c8826d4ba403c3a791353f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &261189030
 GameObject:
   m_ObjectHideFlags: 0
@@ -16106,10 +16074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc7fc1b4707ab924faa001c820ec4569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  inWeight: 33
-  outWeight: 0
-  player: {fileID: 2072721479}
 --- !u!1 &430470132
 GameObject:
   m_ObjectHideFlags: 0
@@ -21693,7 +21657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2289a8eb9bb63a44192196704b02dfd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistanceFromPlayer: 5
 --- !u!4 &582612998
 Transform:
   m_ObjectHideFlags: 0
@@ -29572,22 +29535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bce244e9f018445b993b88a6cb7037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: e2e288e55d57e40469bac38724e1d7d1,
-    type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  preparePoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  diffractionFlags: 11
-  engineLogging: 0
 --- !u!4 &820871162
 Transform:
   m_ObjectHideFlags: 0
@@ -30427,7 +30374,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 843561669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.22, y: 1.5, z: 2.46}
+  m_LocalPosition: {x: -0.77, y: 1.5, z: -3.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -30574,16 +30521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5042b1635c8826d4ba403c3a791353f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!114 &843561675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30595,30 +30532,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941bddd086a438648a5778143dc3b978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0391829491b45934e9b4d98cc9df099d,
-      type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  LargeModePositions:
-  - {fileID: 0}
-  - {fileID: 0}
-  multiPositionArray: []
 --- !u!54 &843561676
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41362,6 +41275,8 @@ GameObject:
   - component: {fileID: 1132964302}
   - component: {fileID: 1132964308}
   - component: {fileID: 1132964309}
+  - component: {fileID: 1132964311}
+  - component: {fileID: 1132964310}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -41380,8 +41295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72057af11cf44c4429cdb78a4da162c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!124 &1132964303
 Behaviour:
   m_ObjectHideFlags: 0
@@ -41453,13 +41366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e62171dfe3a4474299a00f71a71582c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axes: 0
-  sensitivityX: 1.5
-  sensitivityY: 1.5
-  minimumX: -360
-  maximumX: 360
-  minimumY: -60
-  maximumY: 60
 --- !u!114 &1132964307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41469,6 +41375,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5042b1635c8826d4ba403c3a791353f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1132964308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1132964301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e8cfeb3add45e45877be9321c038a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1132964309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1132964301}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78eaf546405a8141ad936d16e8d4386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1132964310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1132964301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016fb796c3bd84646ae68e70d15e7a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &1132964311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1132964301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2193fb8e1421f6b4a8a1f8b5c854a2ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_listeners:
@@ -41481,41 +41433,6 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &1132964308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1132964301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81e8cfeb3add45e45877be9321c038a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1952e532437ab8a44bfe9fdf500f8165,
-      type: 2}
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
---- !u!114 &1132964309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1132964301}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e78eaf546405a8141ad936d16e8d4386, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1135284184
 GameObject:
   m_ObjectHideFlags: 0
@@ -52222,10 +52139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc7fc1b4707ab924faa001c820ec4569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  inWeight: 100
-  outWeight: 66
-  player: {fileID: 0}
 --- !u!1 &1420621585
 GameObject:
   m_ObjectHideFlags: 0
@@ -58133,10 +58046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc7fc1b4707ab924faa001c820ec4569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  inWeight: 66
-  outWeight: 33
-  player: {fileID: 0}
 --- !u!1 &1576703320
 GameObject:
   m_ObjectHideFlags: 0
@@ -73975,6 +73884,62 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2064993921}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2067091725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067091727}
+  - component: {fileID: 2067091726}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2067091726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2067091725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b3443a09cfbca4b971bb97e0b96ff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: 7965e8adf01e8794c8b657639ad3f12a,
+    type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  preparePoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  diffractionFlags: 11
+  engineLogging: 0
+--- !u!4 &2067091727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2067091725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2069190839
 GameObject:
   m_ObjectHideFlags: 0
@@ -74121,8 +74086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e393ea7f76827a4d8cb1a673eaa7eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  camera: {fileID: 1132964306}
 --- !u!114 &2072721481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74134,29 +74097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941bddd086a438648a5778143dc3b978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e0b292af39eb77740b71ccfe53bbd301,
-      type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  LargeModePositions:
-  - {fileID: 0}
-  multiPositionArray: []
 --- !u!54 &2072721482
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -74252,16 +74192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5042b1635c8826d4ba403c3a791353f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &2073032239
 GameObject:
   m_ObjectHideFlags: 0

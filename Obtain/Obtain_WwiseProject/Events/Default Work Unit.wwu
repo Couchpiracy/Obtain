@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2D5EE7F4-E875-4C9A-A3D0-1EE60A4B2C7E}" SchemaVersion="94">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{2D5EE7F4-E875-4C9A-A3D0-1EE60A4B2C7E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{2D5EE7F4-E875-4C9A-A3D0-1EE60A4B2C7E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Zone_Trigger" ID="{0F0C47D8-44C1-41BB-B7BC-6DE1CF9E9C4E}">
+					<ChildrenList>
+						<Action Name="" ID="{32D799AB-038E-48D8-B9C5-FD37C1B76FF0}" ShortID="634460878">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Village_Weight" ID="{DA71658D-A1D8-427E-A46D-5B5C2DC68369}" WorkUnitID="{0B954824-8AA1-45CB-B0E8-DA8A4B69C5A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Initialize" ID="{36BF8A46-BE0D-4347-A454-B6E1FC71B368}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
