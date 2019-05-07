@@ -1,0 +1,21 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	831766718	Zones			\Default Work Unit\Zones	
+
+State	ID	Name	State Group			Notes
+	0	None	Zones			
+	782826392	Default	Zones			
+	3046471832	Red_3	Zones			
+	3046471833	Red_2	Zones			
+	3046471834	Red_1	Zones			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	832057375	Zone			\Default Work Unit\Master Audio Bus\Zone	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	378350335	Spatial			\Default Work Unit\Master Audio Bus\Spatial	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

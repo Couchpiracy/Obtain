@@ -8,6 +8,7 @@
 						<Action Name="" ID="{32D799AB-038E-48D8-B9C5-FD37C1B76FF0}" ShortID="634460878">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="33"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -17,7 +18,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Initialize" ID="{36BF8A46-BE0D-4347-A454-B6E1FC71B368}"/>
+				<Event Name="Initialize" ID="{36BF8A46-BE0D-4347-A454-B6E1FC71B368}">
+					<ChildrenList>
+						<Action Name="" ID="{81D700DD-E4C6-46C1-99B2-4D7AF9F9F379}" ShortID="617547671">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Village_Zone" ID="{3A0EDC14-07CA-4810-BBF4-D62A16243749}" WorkUnitID="{56C1A278-57B5-4654-ACA9-21DC85D020CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_State" ID="{ECDE0059-967C-4DCB-87F2-8FD4676D6EBF}">
+					<ChildrenList>
+						<Action Name="" ID="{C46E39F0-604D-4851-8175-FA859C398706}" ShortID="526547204">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Default" ID="{57184B24-5D3B-4D23-9034-2A835CEEF6C2}" WorkUnitID="{7D5DC2AD-C632-4597-B5AE-ED046AEC1137}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

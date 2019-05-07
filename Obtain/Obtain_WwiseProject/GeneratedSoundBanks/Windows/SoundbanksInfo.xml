@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>C:\Users\eran4614\Documents\GitHub\Obtain\Obtain\Obtain_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\eran4614\Documents\GitHub\Obtain\Obtain\Obtain_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\eran4614\Documents\GitHub\Obtain\Obtain\Obtain_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\eran4614\Documents\GitHub\Obtain\Obtain\Obtain_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1698951735" Name="Initialize" ObjectPath="\Events\Default Work Unit\Initialize"/>
+				<Event Id="2596512161" Name="Set_State" ObjectPath="\Events\Default Work Unit\Set_State" MaxAttenuation="0.000000"/>
+				<Event Id="3500303274" Name="Zone_Trigger" ObjectPath="\Events\Default Work Unit\Zone_Trigger" MaxAttenuation="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="530966115" Language="SFX">
+					<ShortName>Makars Prayer.wav</ShortName>
+					<Path>SFX\Makars Prayer_D79FB2B7.wem</Path>
+				</File>
+				<File Id="757631101" Language="SFX">
+					<ShortName>Medlis Prayer - The Legend of Zelda The Wind Waker.wav</ShortName>
+					<Path>SFX\Medlis Prayer - The Legend of Zelda The Wind Waker_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

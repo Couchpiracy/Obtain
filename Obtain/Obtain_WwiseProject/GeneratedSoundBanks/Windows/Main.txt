@@ -1,0 +1,34 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1698951735	Initialize			\Default Work Unit\Initialize	
+	2596512161	Set_State			\Default Work Unit\Set_State	
+	3500303274	Zone_Trigger			\Default Work Unit\Zone_Trigger	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	831766718	Zones			\Default Work Unit\Zones	
+
+State	ID	Name	State Group			Notes
+	0	None	Zones			
+	782826392	Default	Zones			
+	3046471832	Red_3	Zones			
+	3046471833	Red_2	Zones			
+	3046471834	Red_1	Zones			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	141003165	Default	Zones	\Interactive Music Hierarchy\Default Work Unit\Village_Zone_01\Medlis Prayer - The Legend of Zelda The Wind Waker		
+	948434759	Default	Zones	\Interactive Music Hierarchy\Default Work Unit\Village_Zone_01\Makars Prayer		
+	962050800	Red_1	Zones	\Interactive Music Hierarchy\Default Work Unit\Village_Zone_01\Makars Prayer		
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	832057375	Zone			\Default Work Unit\Master Audio Bus\Zone	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	378350335	Spatial			\Default Work Unit\Master Audio Bus\Spatial	
+
+Effect plug-ins	ID	Name	Type				Notes
+	287224143	New_Wwise_Time_Stretch	Wwise Time Stretch			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	530966115	Makars Prayer	C:\Users\eran4614\Documents\GitHub\Obtain\Obtain\Obtain_WwiseProject\.cache\Windows\SFX\Makars Prayer_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Village_Zone_01\Makars Prayer		6897728
+	757631101	Medlis Prayer - The Legend of Zelda The Wind Waker	C:\Users\eran4614\Documents\GitHub\Obtain\Obtain\Obtain_WwiseProject\.cache\Windows\SFX\Medlis Prayer - The Legend of Zelda The Wind Waker_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Village_Zone_01\Medlis Prayer - The Legend of Zelda The Wind Waker		7761984
+
