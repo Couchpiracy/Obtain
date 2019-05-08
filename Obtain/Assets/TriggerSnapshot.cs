@@ -4,15 +4,19 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 public class TriggerSnapshot : MonoBehaviour {
-
-    public AudioMixer mixer;
+    
     public AudioMixerSnapshot targetSnapshot;
     public AudioMixerSnapshot defaultSnapshot;
+    public AudioMixerSnapshot targetSnapshotTwo;
+
+    public void SwapSnapshot(AudioMixerSnapshot snapshot, float time) {
+        snapshot.TransitionTo(time);
+    }
 
     private void OnTriggerEnter(Collider other) {
-        targetSnapshot.TransitionTo(1);
+        SwapSnapshot(targetSnapshot, 1);
     }
     private void OnTriggerExit(Collider other) {
-        defaultSnapshot.TransitionTo(1);
+        SwapSnapshot(defaultSnapshot, 1);
     }
 }
