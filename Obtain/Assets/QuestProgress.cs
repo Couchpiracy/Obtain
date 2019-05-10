@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.AI;
 
 public class QuestProgress : MonoBehaviour {
     /*
@@ -11,9 +12,10 @@ public class QuestProgress : MonoBehaviour {
     }
     public Objectives currentObjective;
     */
-    public QuestObject trackedQuest;
+    [SerializeField]
+    private GameObject trackedQuestObject;
 
-    public List<QuestObject> allQuests;
+    public List<GameObject> allQuestObjects;
 
     private List<string> ClearedQuests;
 
@@ -21,8 +23,11 @@ public class QuestProgress : MonoBehaviour {
 
     public TestController testController;
 
+    public NavMeshAgentMove navAgent;
+
     private void Start() {
-        trackedQuest = allQuests[0];
+        trackedQuestObject = allQuestObjects[0];
+        navAgent.SetDestination(trackedQuestObject.transform);
         ClearedQuests = new List<string>();
         ResetProgress();
         ChangeSnapshot();
@@ -39,38 +44,51 @@ public class QuestProgress : MonoBehaviour {
     }
     */
 
-    public void ChangeTrackedQuest(QuestObject newQuest) {
-        trackedQuest = newQuest;
+    public void ChangeTrackedQuest(GameObject newQuest) {
+        trackedQuestObject = newQuest;
         ChangeSnapshot();
+        navAgent.SetDestination(trackedQuestObject.transform);
     }
 
     private void ChangeSnapshot() {
-        if(trackedQuest.name.Contains("Quinn"))
+        if(trackedQuestObject.name.Contains("Quinn"))
             triggerSnapshot.SwapSnapshot(triggerSnapshot.targetSnapshot, 1);
         else
             triggerSnapshot.SwapSnapshot(triggerSnapshot.targetSnapshotTwo, 1);
 
     }
 
-    public void ClearObjective(QuestObject quest) {
-        ClearedQuests.Add(quest.name);
-        quest.cleared = true;
-        if(trackedQuest == quest)
-            ChangeTrackedQuest(allQuests[allQuests.IndexOf(trackedQuest) + 1]);
+    public void ClearObjective(GameObject questObject) {
+        ClearedQuests.Add(questObject.name);
+        questObject.GetComponent<QuestTrigger>().relatedQuest.cleared = true;
+        if(trackedQuestObject == questObject) {
+            print("Tracked quest cleared, changing tracked quest");
+            if(allQuestObjects.IndexOf(trackedQuestObject) < allQuestObjects.Count-1) {
+                for(int i = 0; i < allQuestObjects.Count; i++) {
+                    if(ClearedQuests.Contains(allQuestObjects[allQuestObjects.IndexOf(trackedQuestObject) + i].name))
+                        print("Skipped " + allQuestObjects[allQuestObjects.IndexOf(trackedQuestObject) + i].name);
+                    else {
+                        ChangeTrackedQuest(allQuestObjects[allQuestObjects.IndexOf(trackedQuestObject) + i]);
+                        break;
+                    }
+                        
+                }
+                
+            }
+        }
+        print("Cleared " + questObject.name); 
 
-        print("Cleared " + quest.name); 
-
-        if(ClearedQuests.Count == allQuests.Count) {
+        if(ClearedQuests.Count == allQuestObjects.Count) {
             //testController.ChangeTestEnvironment(1);    
             ResetProgress();
         }
     }
 
     public void ResetProgress() {
-        foreach(QuestObject q in allQuests) {
-            q.cleared = false;
+        foreach(GameObject q in allQuestObjects) {
+            q.GetComponent<QuestTrigger>().relatedQuest.cleared = false;
         }
         ClearedQuests.Clear();
-        trackedQuest = allQuests[0];
+        trackedQuestObject = allQuestObjects[0];
     }
 }

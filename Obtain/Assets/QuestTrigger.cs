@@ -9,7 +9,7 @@ public class QuestTrigger : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if(other.tag == "Player")
             if(relatedQuest.cleared == false)
-                other.gameObject.GetComponent<QuestProgress>().ClearObjective(relatedQuest);
+                other.gameObject.GetComponent<QuestProgress>().ClearObjective(gameObject);
 
     }
 }

@@ -21,8 +21,7 @@ public class NavMeshAgentMove : MonoBehaviour {
 
         if (_agent == null)
             Debug.LogError("No NavMeshAgent attached to " + gameObject.name);
-        else
-            SetDestination();
+        
     }
 
 
@@ -31,13 +30,9 @@ public class NavMeshAgentMove : MonoBehaviour {
         SetVolume();
     }
 
-    private void SetDestination() {
-
-        if (destination != null) {
-            Vector3 targetVector = destination.transform.position;
-            _agent.SetDestination(targetVector);
-        }
-
+    public void SetDestination(Transform target) {
+        destination = target;
+        _agent.SetDestination(destination.position);
     }
 
     private void LimitDistance() {
