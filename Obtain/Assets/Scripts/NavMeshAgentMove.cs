@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 
-public class NavMeshAgentMove : MonoBehaviour {
+public class NavMeshAgentMove : MonoBehaviour
+{
 
     public Transform player;
     public Transform destination;
@@ -14,48 +16,66 @@ public class NavMeshAgentMove : MonoBehaviour {
 
     NavMeshAgent _agent;
 
-    void Start() {
+    void Start()
+    {
         source = GetComponent<AudioSource>();
         _agent = GetComponent<NavMeshAgent>();
         speed = _agent.speed;
 
         if (_agent == null)
             Debug.LogError("No NavMeshAgent attached to " + gameObject.name);
-        
+
     }
 
 
-    void Update() {
+    void Update()
+    {
         LimitDistance();
         SetVolume();
     }
 
-    public void SetDestination(Transform target) {
+    public void SetDestination(Transform target)
+    {
         destination = target;
         _agent.SetDestination(destination.position);
+        source.volume = 0;
+        if (target.gameObject.name != "Quinn")
+        {
+            source = GetComponents<AudioSource>()[1];
+        }
+        else
+        {
+            source = GetComponents<AudioSource>()[0];
+        }
     }
 
-    private void LimitDistance() {
-        if ((transform.position - player.transform.position).magnitude >= 3f) {
+    private void LimitDistance()
+    {
+        if ((transform.position - player.transform.position).magnitude >= 3f)
+        {
             _agent.speed = speed;
             _agent.SetDestination(player.position);
         }
-        else if (((transform.position - player.transform.position).magnitude >= 2.2f) )/*&& ((transform.position - player.transform.position).magnitude < 4.0f))*/ {
+        else if (((transform.position - player.transform.position).magnitude >= 2.2f))/*&& ((transform.position - player.transform.position).magnitude < 4.0f))*/
+        {
             _agent.speed = 0;
         }
-        else {
+        else
+        {
             _agent.speed = speed;
             _agent.SetDestination(destination.position);
         }
     }
 
-    private void SetVolume() {
+    private void SetVolume()
+    {
 
         Vector3 playerAngle = player.GetComponentInChildren<CameraController>().transform.forward;
         Vector3 targetAngle = player.transform.position - transform.position;
 
         //source.volume = Mathf.Clamp(Vector3.Angle(playerAngle, targetAngle), minAngle, maxAngle) * 1 / minAngle - 1;
-        if (Vector3.Angle(playerAngle, targetAngle) >= 90) {
+        if (Vector3.Angle(playerAngle, targetAngle) >= 90)
+        {
             // Byts ut mot snapshot 1
             if (source.volume < 0.25f)
                 source.volume += Time.deltaTime;
@@ -66,7 +86,7 @@ public class NavMeshAgentMove : MonoBehaviour {
         else
             // Byts ut mot snapshot 2
             source.volume -= Time.deltaTime;
-            //
+        //
 
         //print(Vector3.Angle(playerAngle, targetAngle));
 
