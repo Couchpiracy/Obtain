@@ -37,7 +37,7 @@ public class QuestProgress : MonoBehaviour {
         trackedQuestObject = newQuest;                          // Sets tracked quest to the new quest object
         ChangeSnapshot();                                       // Changes the audio snapshot to correspond to the new tracked quest
         navAgent.SetDestination(trackedQuestObject.transform);  // Sets the NavAgent's destination to the location of the new tracked quest
-        questText.SetText(newQuest);
+        //questText.SetText(newQuest);
     }
 
     private void ChangeSnapshot() {
