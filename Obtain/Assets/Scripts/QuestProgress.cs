@@ -34,10 +34,14 @@ public class QuestProgress : MonoBehaviour {
     }
 
     public void ChangeTrackedQuest(GameObject newQuest) {       // Takes in a quest object
+        print(newQuest);
         trackedQuestObject = newQuest;                          // Sets tracked quest to the new quest object
         ChangeSnapshot();                                       // Changes the audio snapshot to correspond to the new tracked quest
-        navAgent.SetDestination(trackedQuestObject.transform);  // Sets the NavAgent's destination to the location of the new tracked quest
-        //questText.SetText(newQuest);
+        navAgent.SetDestination(trackedQuestObject.transform);  // Sets the NavAgent's destination to the location of the new tracked quest/*
+        if (transform.name == "Player1") {
+            questText.SetText(newQuest);            
+        }
+        else questText.enabled = false;
     }
 
     private void ChangeSnapshot() {
@@ -53,8 +57,8 @@ public class QuestProgress : MonoBehaviour {
         if (trackedQuestObject == questObject) {                                                                            // If the cleared quest is also the tracked quest, go through to see what quest should be tracked next.
             if (allQuestObjects.IndexOf(trackedQuestObject) < allQuestObjects.Count - 1) {
                 for (int i = 0 ; i < allQuestObjects.Count ; i++) {
-                    if (!ClearedQuests.Contains(allQuestObjects[allQuestObjects.IndexOf(trackedQuestObject) + i].name)) {   // Checks if the next quest is cleared or not
-                        ChangeTrackedQuest(allQuestObjects[allQuestObjects.IndexOf(trackedQuestObject) + i]);               // If it isn't, set tracked quest and then end the loop.
+                    if (!ClearedQuests.Contains(allQuestObjects[i].name)) {   // Checks if the next quest is cleared or not
+                        ChangeTrackedQuest(allQuestObjects[i]);               // If it isn't, set tracked quest and then end the loop.
                         break;
                     }
                 }
